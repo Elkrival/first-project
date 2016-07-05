@@ -1,0 +1,78 @@
+var body = document.querySelector('body')
+var reload = document.getElementById('reload')
+
+var c1 = document.getElementById('card1');
+var c2 = document.getElementById('card2');
+var c3 = document.getElementById('card3');
+var c4 = document.getElementById('card4');
+
+var cc1 = document.createElement('p')
+var cc2 = document.createElement('p')
+var cc3 = document.createElement('p')
+var cc4 = document.createElement('p')
+
+var card1;
+var card2;
+var card3;
+var card4;
+
+myClick();
+var ccc1;
+var ccc2;
+var ccc3;
+var ccc4;
+
+var start = document.getElementById('start')
+start.addEventListener("click", begin)
+
+var click_count;
+function myClick(event) {
+  click_count++ ;
+  if (click_count === 1){
+    start.removeEventListener("click", begin)
+  }
+}
+
+  function begin(){
+
+
+
+    var deal= function(start) {
+    card = Math.floor(Math.random()*52+1);
+      while( card < 4){
+        return card
+    }
+    card1 = card;
+    card2 = card;
+    card3 = card;
+    card4 = card;
+  }console.log(deal())
+
+
+
+
+
+    var suits = (deal());
+    console.log(suits);
+
+        if(card <= 13){
+            suits = ' of Lannisters'
+        }else if(card >= 14  && card < 26){
+            suits = ' of Starks'
+        }else if(card >= 27 && card < 39){
+        suits = ' of Targaryan'
+      }else if(card >= 40 && card < 52){
+            suits = ' of Tyrell'
+    };
+    var score = function(card) {
+
+      if(card % 13 === 0 || card % 13 === 11 || card % 13 === 12){
+          return 10
+      }else if(card % 13 === 1){
+
+      return 11
+      }else{
+          return card % 13
+      }
+
+    }
