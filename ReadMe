@@ -1,0 +1,25 @@
+Space Team BlackJack
+
+AI dealer is an alien overlord, you and your partner must make choices accordingly based on who wins the blackjack turn. If AI 
+has blackjack, or a value larger than both players, the AI alien overlord will perform an attack on the spaceteam ship. If the
+spaceteam players have a value higher than the alien overlord, the spaceteam will perform an attack on AI.
+
+The workings of this code is not fully complete, however, got a working blackjack game for two players with DOM manipulation for player names
+and for who wins.
+
+The 52 cards are set in an Array, and they are defined by the images of the cards. We use a random function called dealer to loop the length of the array, and choose a random card, 
+then we use the .splice function to remove 1 card from the array, and then the card is pushed to a player.
+Card 1 and Card2 are the hands for player1 and Card3 and Card4 make up the hand for player2, to set the value of the cards.
+
+I set up a function called pointSystem, that requires the card parameter. This function contains if and else statements that denominate the value of the cards, 
+as of right now the ACE is only worth 1 point, Kings, Jacks and Queens are valued at 10 points.
+
+Once we parse the value of the cards we add them for each player to get their total value, and then the winning function takes those values and compares them, 
+whoever has the highest value wins or if the value is the same the players are tied.
+
+Things to still complete. A function for Hit, this will give the player an additional card, if they are above 21 they lose, but if the value
+of their hand is closer to 21 and greater than the other players then that will create a winning message, need to complete AI for 
+dealer AKA alien overlord, and finish CSS styling.
+
+
+
